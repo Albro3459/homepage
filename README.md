@@ -1,2 +1,2 @@
-# homnepage
+# homepage
 for compass @wegreauxpeople
