@@ -22,11 +22,11 @@ class HomePage extends StatelessWidget {
           children: [
             globals.AppDesign.myHeader,
             Expanded(
-              child: Center(
-                child: SingleChildScrollView(
+              child: SingleChildScrollView(
+                child: Center(
                   child: Column(
                     children: [
-                      const SizedBox(height: 50),
+                      const SizedBox(height: 150),
                       UploadButton(onTap: uploadInfo),
                       const SizedBox(height: 90),
                       ScanButton(onTap: scanStudentID),
