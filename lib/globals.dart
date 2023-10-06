@@ -11,54 +11,80 @@ class AppDesign {
 
   // Button Responsiveness
   static double? getButtonWidth(maxWidth) {
-    return maxWidth < 360 ? null : 650;
+    return maxWidth < 700 ? null : 650;
   }
 
   // Upload Button
-  static BoxDecoration uploadButtonBoxDecoration = BoxDecoration(
-    color: Colors.grey,
-    border: Border.all(color: Colors.grey),
-    borderRadius: BorderRadius.circular(8),
-  );
-  static Text uploadButtonText = Text(
-    "Upload Student Information",
-    style: TextStyle(
-      color: Colors.white,
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
-      backgroundColor: Colors.grey.shade500, // Use a Color here
-    ),
-  );
+  Container createUploadButton({double? width}) {
+    return Container(
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.symmetric(horizontal: 50),
+        width: getButtonWidth(width),
+        decoration: BoxDecoration(
+          color: Colors.grey,
+          border: Border.all(color: Colors.grey),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Center(
+          child: Text(
+            "Upload Student Information",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.grey.shade500, // Use a Color here
+            ),
+          ),
+        ));
+  }
 
   // Scan Button
-  static BoxDecoration scanButtonBoxDecoration = BoxDecoration(
-    color: Colors.grey[350],
-    border: Border.all(color: Colors.grey),
-    borderRadius: BorderRadius.circular(8),
-  );
-  static Text scanButtonText = Text(
-    "Scan Student ID",
-    style: TextStyle(
-      color: Colors.black,
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
-      backgroundColor: Colors.grey[350], // Use a Color here
-    ),
-  );
+  Container createScanButton({double? width}) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.symmetric(horizontal: 50),
+      width: getButtonWidth(width),
+      decoration: BoxDecoration(
+        color: Colors.grey[350],
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Center(
+        child: Text(
+          "Scan Student ID",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            backgroundColor: Colors.grey[350], // Use a Color here
+          ),
+        ),
+      ),
+    );
+  }
 
   // Core Admin Button
-  static BoxDecoration coreAdminButtonBoxDecoration = BoxDecoration(
-    color: Colors.grey[350],
-    border: Border.all(color: Colors.grey),
-    borderRadius: BorderRadius.circular(8),
-  );
-  static Text coreAdminButtonText = Text(
-    "Core Administration",
-    style: TextStyle(
-      color: Colors.black,
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
-      backgroundColor: Colors.grey[350], // Use a Color here
-    ),
-  );
+  Container createCoreAdminButton({double? width}) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.symmetric(horizontal: 50),
+      width: getButtonWidth(width),
+      decoration: BoxDecoration(
+        color: Colors.grey[350],
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Center(
+        child: Text(
+          "Core Administration",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            backgroundColor: Colors.grey[350], // Use a Color here
+          ),
+        ),
+      ),
+    );
+  }
 }
